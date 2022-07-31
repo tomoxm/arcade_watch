@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,600,800);
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
 .button, .input, .textarea, .select select, .file-cta,
@@ -11847,28 +11847,107 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem;
 }
-body {
-  font-family: "Nunito", sans-serif;
-  font-size: 2em;
-  text-align: center;
-  min-height: 100vh;
-  color: yellow;
-  background: #333;
+/**
+ * HIGHLIGHT
+ */
+.title,
+strong {
+  color: #ffed4a;
+  font-weight: 800;
+  line-height: 1.5;
 }
 
 .title {
-  font-size: 5em;
-  font-weight: bold;
+  text-align: center;
 }
 
-ul, ol {
+/**
+ * LINKS
+ */
+a {
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+  border-bottom: 4px dotted white;
+}
+a strong {
+  color: #ffed4a;
+}
+
+/**
+ * BODY
+ */
+body {
+  color: white;
+  font-size: 2em;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  background: #333333;
+  min-height: 100vh;
+  padding: 0 1.5rem;
+}
+
+/**
+ * HEADER / LOGO
+ */
+.logo {
+  color: #292929;
+  font-size: 3.5em;
+  font-weight: 600;
+  margin: -0.1em 0 0;
+}
+.logo a:hover {
+  border: none;
+}
+
+/**
+ * LISTS
+ */
+ul,
+ol {
   list-style: none;
 }
-ul li, ol li {
+ul li,
+ol li {
   margin-bottom: 1.5em;
 }
 
-.posts p {
-  color: white;
-  font-size: 0.5em;
+.is-unstyled {
+  list-style: none;
+}
+
+/**
+ * LIST OF POSTS
+ */
+.posts {
+  list-style: none;
+}
+.posts li {
+  margin-bottom: 1.5em;
+}
+
+/**
+* POST (ARTICLE)
+*/
+.post {
+  background: #292929;
+  border-radius: 0.75em;
+  padding: 1.1em 1.45em 1.4em;
+}
+.post .title {
+  margin-bottom: 0.65em;
+}
+.post header {
+  text-align: center;
+}
+.post footer {
+  margin-top: 1.5em;
+}
+.post footer .comments {
+  margin-left: 1em;
+}
+.post .content,
+.post footer {
+  font-size: 1rem;
 }

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,14 +16,25 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+
 <body>
+
+    <header class="site-header">
+        <h1 class="title logo">
+            <a href="/">( ͡° ͜ʖ ͡°)</a>
+        </h1>
+    </header>
+
     <div id="app">
-        <main class="container">
-            @yield('content')
-        </main>       
+        <main id="app" class="columns is-centered">
+            <section class="column is-three-fifths">
+                @yield('content')
+            </section>
+        </main>
     </div>
 
     @yield('scripts')
 
 </body>
+
 </html>
