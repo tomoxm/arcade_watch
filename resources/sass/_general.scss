@@ -1,6 +1,11 @@
 /**
  * BODY
  */
+body,
+html {
+    background: $body-bg;
+}
+
 body {
     color: $text-color;
 
@@ -10,7 +15,6 @@ body {
         weight: 600;
     }
 
-    background: $body-bg;
     min-height: 100vh;
     padding: 0 1.5rem;
 }
@@ -32,16 +36,17 @@ body {
 /**
  * LISTS
  */
- ul,
- ol {
-     list-style: none;
- 
-     li {
-         margin-bottom: 1.5em;
-     }
- }
- 
- .is-unstyled {
-     list-style: none;
- }
- 
+ul,
+ol {
+    list-style: none;
+
+    li {
+        margin-bottom: 1.5em;
+    }
+}
+
+.notification {
+    li {
+        margin-bottom: 0;
+    }
+}

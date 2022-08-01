@@ -9,6 +9,14 @@ class Comment extends Model
 {
     use HasFactory;
 
+    /**
+     * The attributes that are mass assignable.
+     */
+
+    protected $fillable = [
+        'text', 'post_id', 'user_id'
+    ];
+
 
     /**
      *  Get the author of the comment
@@ -25,5 +33,4 @@ class Comment extends Model
     {
         return $this->belongsTo('App\Models\Post');
     }
-
 }

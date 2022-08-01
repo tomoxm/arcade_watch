@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito:400,600,800);
+@import url(https://fonts.googleapis.com/css?family=Nunito:600,800);
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
 .button, .input, .textarea, .select select, .file-cta,
@@ -11878,12 +11878,16 @@ a strong {
 /**
  * BODY
  */
+body,
+html {
+  background: #333333;
+}
+
 body {
   color: white;
   font-size: 2em;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
-  background: #333333;
   min-height: 100vh;
   padding: 0 1.5rem;
 }
@@ -11913,20 +11917,30 @@ ol li {
   margin-bottom: 1.5em;
 }
 
-.is-unstyled {
-  list-style: none;
+.notification li {
+  margin-bottom: 0;
 }
 
-/**
- * LIST OF POSTS
- */
-.posts {
-  list-style: none;
+.navigation {
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 1em 1.5em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: right;
 }
-.posts li {
-  margin-bottom: 1.5em;
+.navigation a {
+  border-color: #7a7a7a;
+  border-bottom-width: 2px;
+  margin-left: 0.75em;
 }
 
+@media screen and (max-width: 768px) {
+  .navigation {
+    padding: 1em 2em;
+  }
+}
 /**
 * POST (ARTICLE)
 */
@@ -11941,13 +11955,67 @@ ol li {
 .post header {
   text-align: center;
 }
-.post footer {
-  margin-top: 1.5em;
-}
-.post footer .comments {
-  margin-left: 1em;
-}
 .post .content,
 .post footer {
   font-size: 1rem;
+}
+
+.meta .author {
+  margin-right: 1em;
+}
+.post .meta {
+  margin-top: 1.5em;
+}
+
+.full .content,
+.full footer {
+  font-size: 1.2rem;
+}
+
+.comment .meta {
+  font-size: 1rem;
+  margin-top: 0.35em;
+}
+.comment .content {
+  margin-bottom: 0;
+}
+
+/**
+ * COMMENT FORM
+ */
+.add-comment-form {
+  margin-bottom: 2.25em;
+  padding-bottom: 2.25em;
+  border-bottom: 4px dotted #7a7a7a;
+}
+.add-comment-form .button {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.add-comment-form .field textarea,
+.add-comment-form .field input {
+  outline: none;
+  border: none transparent;
+}
+.add-comment-form .field textarea:focus,
+.add-comment-form .field input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.225em rgba(255, 255, 255, 0.25);
+}
+.add-comment-form .field label {
+  color: white;
+}
+
+/* .comments {
+    li:last-child {
+        margin-bottom: 0;
+    }
+} */
+.field,
+.label {
+  color: inherit;
+}
+
+#logout-form {
+  display: none;
 }

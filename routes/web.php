@@ -13,12 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//auth
-//Auth::routes();
+// auth
+Auth::routes();
 
-
-//home
+// home
 Route::get('/', 'App\Http\Controllers\PostController@index');
 
-//posts
+// posts
 Route::resource('posts', 'App\Http\Controllers\PostController');
+
+// comments
+Route::resource('comments', 'App\Http\Controllers\CommentController')->only([
+    'store', 'update', 'destroy'
+]);  

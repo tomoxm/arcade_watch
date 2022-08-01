@@ -1,5 +1,5 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,800");
+@import url("https://fonts.googleapis.com/css?family=Nunito:600,800");
 
 // Bulma
 @import "~bulma/css/bulma.css";
@@ -8,4 +8,7 @@
 @import "variables";
 @import "typography";
 @import "general";
-@import "articles";
+@import "navigation";
+@import "posts";
+@import "comments";
+@import "forms";

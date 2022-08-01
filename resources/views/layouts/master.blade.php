@@ -20,10 +20,13 @@
 <body>
 
     <header class="site-header">
+        @include('navigation')
         <h1 class="title logo">
             <a href="/">( ͡° ͜ʖ ͡°)</a>
         </h1>
     </header>
+
+   
 
     <div id="app">
         <main id="app" class="columns is-centered">

@@ -1,4 +1,4 @@
-<article class="post">
+<article class="post {{ $type }}">
     <header>
         <h2 class="title">
             <a href="/posts/{{ $post->id }}">
@@ -12,10 +12,10 @@
     </div>
 
     <footer class="meta">
-        <a href="" class="author">
+        <a href="/users/{{ $post->user->id }}" class="author">
             @<strong>{{ $post->user->name }}</strong>
         </a>
-        <a href="" class="commments">
+        <a href="/posts/{{ $post->id }}#comments" class="commments">
             {{ $post->comments->count() }}
             <strong>{{ str_plural('comment', $post->comments->count() ) }}</strong>
         </a>
