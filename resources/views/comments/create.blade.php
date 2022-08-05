@@ -1,5 +1,8 @@
+@include('errors')
+
 <form action="/comments" method="POST" class="add-comment-form">
     @csrf
+
     <div class="field">
         <label class="label">
             be niceee youuuu dckhd
@@ -16,5 +19,5 @@
     </div>
 
     <input type="hidden" name="post_id" value="{{ $post->id }}" />
-    <input type="hidden" name="user_id" value="{{ auth()->user()->id }}" />
+    
 </form>

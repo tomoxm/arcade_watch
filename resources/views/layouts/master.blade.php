@@ -26,17 +26,12 @@
         </h1>
     </header>
 
-   
-
-    <div id="app">
-        <main id="app" class="columns is-centered">
-            <section class="column is-three-fifths">
-                @yield('content')
-            </section>
-        </main>
-    </div>
-
-    @yield('scripts')
+    <main id="app" class="columns is-centered">
+        <section class="column is-three-fifths">
+            @yield('content')
+        </section>
+        <flash-message text="{{ session('flash') }}"></flash-message>
+    </main>
 
 </body>
 

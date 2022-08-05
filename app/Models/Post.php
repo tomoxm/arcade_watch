@@ -10,6 +10,15 @@ class Post extends Model
     use HasFactory;
     
     /**
+     * Get the route key for the model.
+     */
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+    /**
      * Get the author of the blog post.
      */
     public function user() 
@@ -22,7 +31,7 @@ class Post extends Model
      */
     public function comments() 
     {
-        return $this->hasMany('App\Models\Comment');
+        return $this->hasMany('App\Models\Comment')->latest();
     }
 
 }
